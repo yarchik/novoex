@@ -734,12 +734,12 @@ input:focus::placeholder {
 .hero-section-slide {
   min-height: 90vh;
   position: relative;
-  padding: 150px 0px 80px 0px;
+  padding: 150px 0px 120px 0px;
   box-sizing: border-box !important;
 }
 @media (min-width: 1024px) {
   .hero-section-slide {
-    padding: 185px 0px 80px 0px;
+    padding: 185px 0px 120px 0px;
   }
 }
 .hero-section-slide-bg {
@@ -864,6 +864,27 @@ input:focus::placeholder {
 }
 .hero-section-slide-social:hover {
   background-color: #008f81;
+}
+.hero-section .swiper-pagination-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  left: 0;
+  bottom: 80px;
+}
+.hero-section .swiper-pagination {
+  position: static;
+  text-align: left;
+}
+.hero-section .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background-color: #00a6d8;
+  transition: all 0.25s ease 0s;
+}
+.hero-section .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #80d3eb;
 }
 
 .insights-section {
