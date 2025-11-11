@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Starter Kit</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body class="cases">
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-body">
+        <nav class="header-menu">
+          <button class="header-menu-burger js-burger">
+            <span></span>
+          </button>
+          <ul class="header-menu-list js-nav">
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Home</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">About us</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Sector Experience</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Client Services</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Case Studies</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Candidate Support</a>
+            </li>
+            <li class="header-menu-divider"></li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Executive Roles Offices</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-search">
+          <p>Assignment Search:</p>
+          <select name="header-search-sector" class="new-select" id="header-search-sector">
+    				<option value="Sector">Sector</option>
+    			</select>
+          <select name="header-search-role" class="new-select" id="header-search-role">
+    				<option value="Role">Role</option>
+    			</select>
+        </div>
+        <div class="header-actions">
+          <a href="#" class="header-action-link">Call Us 
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1">
+              <g id="icomoon-ignore">
+              </g>
+              <path d="M23.086 1.606h-14.173c-0.797 0-1.444 0.647-1.444 1.444v25.901c0 0.798 0.647 1.444 1.444 1.444h14.173c0.797 0 1.444-0.646 1.444-1.444v-25.901c0-0.797-0.647-1.444-1.444-1.444zM23.464 28.951c0 0.208-0.169 0.377-0.377 0.377h-14.173c-0.208 0-0.377-0.169-0.377-0.377v-4.95h14.928v4.95zM23.464 22.934h-14.928v-17.042h14.928v17.042zM23.464 4.826h-14.928v-1.776c0-0.208 0.169-0.378 0.377-0.378h14.173c0.208 0 0.377 0.17 0.377 0.378v1.776z" fill="#000000">
+
+              </path>
+              <path d="M14.401 26.129h3.199v1.066h-3.199v-1.066z" fill="#000000">
+
+              </path>
+            </svg>
+            </span>
+          </a>
+          <a href="#" class="header-action-link">Email Us
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+              <g>
+                <path class="st0" d="M510.678,112.275c-2.308-11.626-7.463-22.265-14.662-31.054c-1.518-1.915-3.104-3.63-4.823-5.345   c-12.755-12.818-30.657-20.814-50.214-20.814H71.021c-19.557,0-37.395,7.996-50.21,20.814c-1.715,1.715-3.301,3.43-4.823,5.345   C8.785,90.009,3.63,100.649,1.386,112.275C0.464,116.762,0,121.399,0,126.087V385.92c0,9.968,2.114,19.55,5.884,28.203   c3.497,8.26,8.653,15.734,14.926,22.001c1.59,1.586,3.169,3.044,4.892,4.494c12.286,10.175,28.145,16.32,45.319,16.32h369.958   c17.18,0,33.108-6.145,45.323-16.384c1.718-1.386,3.305-2.844,4.891-4.43c6.27-6.267,11.425-13.741,14.994-22.001v-0.064   c3.769-8.653,5.812-18.171,5.812-28.138V126.087C512,121.399,511.543,116.762,510.678,112.275z M46.509,101.571   c6.345-6.338,14.866-10.175,24.512-10.175h369.958c9.646,0,18.242,3.837,24.512,10.175c1.122,1.129,2.179,2.387,3.112,3.637   L274.696,274.203c-5.348,4.687-11.954,7.002-18.696,7.002c-6.674,0-13.276-2.315-18.695-7.002L43.472,105.136   C44.33,103.886,45.387,102.7,46.509,101.571z M36.334,385.92V142.735L176.658,265.15L36.405,387.435   C36.334,386.971,36.334,386.449,36.334,385.92z M440.979,420.597H71.021c-6.281,0-12.158-1.651-17.174-4.552l147.978-128.959   l13.815,12.018c11.561,10.046,26.028,15.134,40.36,15.134c14.406,0,28.872-5.088,40.432-15.134l13.808-12.018l147.92,128.959   C453.137,418.946,447.26,420.597,440.979,420.597z M475.666,385.92c0,0.529,0,1.051-0.068,1.515L335.346,265.221L475.666,142.8   V385.92z"/>
+              </g>
+              </svg>
+            </span> 
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="banner-section">
+      	<div class="hero-section-slide swiper-slide">
+      		<div class="hero-section-slide-bg">
+      			<img src="assets/images/insight-bg.png" alt="banner-section-image">
+      		</div>
+      		<div class="hero-section-slide-content">
+      			<div class="hero-section-logo">
+      				<img src="assets/images/hero-section-logo.png" alt="hero-section-logo">
+      			</div>
+      			<div class="container">
+      				<h1 class="small"><span>Executive Search vs Internal Recruiters for Senior Hires</span></h1>
+      				<div class="hero-section-slide-bottom">
+      					<p class="hero-section-slide-date">23/10/2025</p>
+      					<div class="hero-section-slide-socials">
+      						<a href="#" class="hero-section-slide-social">
+      							X
+      						</a>
+      						<a href="#" class="hero-section-slide-social">
+      							f
+      						</a>
+      						<a href="#" class="hero-section-slide-social">
+      							in
+      						</a>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>	
+      </div>
+	    <div class="article-section insight-article">
+	    	<div class="container">
+	    		<div class="article-section-body">
+	    			<div class="article-section-content">
+	    				<h2>For newly appointed CEOs, the first year in the role can feel like a proving ground.<br>There’s pressure to perform, to inspire confidence, and to deliver results – fast.</h2>
+	    				<p>Boards expect a clear plan, decisive action, and early wins. Executive teams look for direction and stability and the CEO themselves carry the weight of expectations shaped by past roles, predecessors, legacies, and personal ambition. Yet, despite best intentions on all sides, the first year often falters – not due to a lack of capability but because the onboarding process isn’t structured to match the complexity of the challenge.</p>
+	    				<h3>Why Early Drag Derails Performance</h3>
+	    				<p>Many boards underestimate the learning curve a new CEO faces. It’s not just about stepping into a bigger role; it’s about recalibrating leadership in a context where authority is absolute, but influence must be earned. In these early months, seemingly small misalignments – communication with the board, cohesion within the executive team, clarity of strategic priorities, etc. – can drag significantly on performance. Without the right support, CEOs spend much of their first year reacting rather than leading, spending political capital rather than investing it.<br><br>
+	    				And this risk is only growing: In Q1 2023, CEO departures reached a record high, with 464 exits in the U.S., up 45% from the same period the year before and 14% from the previous quarter. These figures are a signal that the margin for error in this first year is rapidly narrowing.</p>
+	    				<h3>The Triple Pressure CEOs Face</h3>
+	    				<p>A newly appointed CEO contends with three mounting pressures. First, there’s the need to build credibility and alignment with the board, establishing a rhythm of communication and trust that may not yet exist. Second, there’s the challenge of assessing and supporting the executive team while driving the performance of the business. The speed required to do so sharply contrasts with badging and norms of most organizations.</p>
+	    				<p class="quote">
+	    					<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 48 48" fill="none">
+	    						<path fill-rule="evenodd" clip-rule="evenodd" d="M18.8533 9.11599C11.3227 13.9523 7.13913 19.5812 6.30256 26.0029C5.00021 36 13.9404 40.8933 18.4703 36.4967C23.0002 32.1002 20.2848 26.5196 17.0047 24.9942C13.7246 23.4687 11.7187 24 12.0686 21.9616C12.4185 19.9231 17.0851 14.2713 21.1849 11.6392C21.4569 11.4079 21.5604 10.9591 21.2985 10.6187C21.1262 10.3947 20.7883 9.95557 20.2848 9.30114C19.8445 8.72888 19.4227 8.75029 18.8533 9.11599Z" fill="#000000"/>
+	    						<path fill-rule="evenodd" clip-rule="evenodd" d="M38.6789 9.11599C31.1484 13.9523 26.9648 19.5812 26.1282 26.0029C24.8259 36 33.7661 40.8933 38.296 36.4967C42.8259 32.1002 40.1105 26.5196 36.8304 24.9942C33.5503 23.4687 31.5443 24 31.8943 21.9616C32.2442 19.9231 36.9108 14.2713 41.0106 11.6392C41.2826 11.4079 41.3861 10.9591 41.1241 10.6187C40.9519 10.3947 40.614 9.95557 40.1105 9.30114C39.6702 8.72888 39.2484 8.75029 38.6789 9.11599Z" fill="#000000"/>
+	    					</svg>
+	    					Finally, there’s the internal pressure: the dissonance between the role as imagined and the role as lived. Even seasoned leaders find that the CEO chair demands a different mindset, and one that isn’t easily substituted with experience from previous roles.
+	    				</p>
+	    				<h3>When Boards Start to Worry</h3>
+	    				<p>For boards, the learning curve is equally real. A candidate who impressed during the hiring process may not immediately deliver what was expected.<br><br>Strategic direction may lag, legacy communication habits may linger, and at least one board member may begin to question the appointment altogether. It’s a vulnerable time for both CEO and board, and without a plan to align expectations early, the relationship can begin to fray before it fully forms.</p>
+	    				<h3>Structure Over Pressure</h3>
+	    				<p>The solution is not more pressure, but more structure. High-performing boards and CEOs are increasingly recognising the value of formalised integration support.<br><br>Integration coaching, ideally initiated from the moment of appointment, gives CEOs a six-month runway to reflect, reframe, and realign. It allows space to confront the realities of the role without judgment. Supervised by a neutral third party who can surface uncomfortable truths and ask difficult questions without political cost, this isn’t about fixing problems; it’s about creating conditions for acceleration.</p>
+	    				<h3>Aligning the Team, Engaging the Board</h3>
+	    				<p>A CEO’s effectiveness is also shaped by their team. A facilitated team retreat early in the tenure helps clarify shared priorities, expose hidden tensions, and establish a collective sense of momentum. When team coaching follows, the group can move from alignment to action, translating vision into operational discipline.</p>
+	    				<p class="quote">
+	    					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+	    						<path fill-rule="evenodd" clip-rule="evenodd" d="M18.8533 9.11599C11.3227 13.9523 7.13913 19.5812 6.30256 26.0029C5.00021 36 13.9404 40.8933 18.4703 36.4967C23.0002 32.1002 20.2848 26.5196 17.0047 24.9942C13.7246 23.4687 11.7187 24 12.0686 21.9616C12.4185 19.9231 17.0851 14.2713 21.1849 11.6392C21.4569 11.4079 21.5604 10.9591 21.2985 10.6187C21.1262 10.3947 20.7883 9.95557 20.2848 9.30114C19.8445 8.72888 19.4227 8.75029 18.8533 9.11599Z" fill="#000000"/>
+	    						<path fill-rule="evenodd" clip-rule="evenodd" d="M38.6789 9.11599C31.1484 13.9523 26.9648 19.5812 26.1282 26.0029C24.8259 36 33.7661 40.8933 38.296 36.4967C42.8259 32.1002 40.1105 26.5196 36.8304 24.9942C33.5503 23.4687 31.5443 24 31.8943 21.9616C32.2442 19.9231 36.9108 14.2713 41.0106 11.6392C41.2826 11.4079 41.3861 10.9591 41.1241 10.6187C40.9519 10.3947 40.614 9.95557 40.1105 9.30114C39.6702 8.72888 39.2484 8.75029 38.6789 9.11599Z" fill="#000000"/>
+	    					</svg>
+	    					Critically, the board must remain part of this rhythm. Regular offsite sessions or structured touchpoints, guided by a facilitator, allow for expectations to be recalibrated; performance to be contextualised, and trust to be deepened.
+	    				</p>
+	    				<h3>A Smarter First Year</h3>
+	    				<p>The level of structured support doesn’t require a multi-million-dollar transformation programme. It requires thoughtful design, early intervention, and the humility to accept that the CEO can, or should, go it alone.<br><br>When onboarding is treated as a strategic priority rather than an administrative handover, the results speak for themselves: faster time to effectiveness, better board-CEO alignment, and stronger long-term performance.</p>
+	    				<h3>Normalising Help at the Top</h3>
+	    				<p>Perhaps the most important shift is cultural. Boards must normalise the idea that asking for help is not a red flag but a marker of good judgment. CEOs must feel empowered to question assumptions, seek insight, and engage in structured reflection. The first year.</p>
+				
+	    				<div class="article-section-bottom">
+	    					<div class="article-section-pagination">
+	    						<a href="#" class="article-section-prev-button button secondary">LAST STORY</a>
+	    						<div class="article-section-pagination-links">
+	    							<a href="#" class="article-section-pagination-link">1</a>
+	    							<a href="#" class="article-section-pagination-link">2</a>
+	    							<a href="#" class="article-section-pagination-link">3</a>
+	    							<a href="#" class="article-section-pagination-link">4</a>
+	    							<a href="#" class="article-section-pagination-link">5</a>
+	    							<a href="#" class="article-section-pagination-link">6</a>
+	    						</div>
+	    						<a href="#" class="article-section-next-button button secondary">NEXT STORY</a>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="article-section-sidebar">
+	    				<div class="article-section-teams">
+	    					<div class="article-section-teams-card">
+	    						<div class="article-section-teams-card-image">
+	    							<img src="assets/images/team-3.png" alt="team-1" loading="lazy">
+	    						</div>
+	    						<div class="article-section-teams-card-content">
+	    							<h4 class="article-section-teams-card-name">George Woodward</h4>
+	    							<p class="article-section-teams-card-job-title">Director</p>
+	    						</div>
+	    					</div>
+	    					<div class="article-section-teams-card">
+	    						<div class="article-section-teams-card-image">
+	    							<img src="assets/images/team-3.png" alt="team-1" loading="lazy">
+	    						</div>
+	    						<div class="article-section-teams-card-content">
+	    							<h4 class="article-section-teams-card-name">George Woodward</h4>
+	    							<p class="article-section-teams-card-job-title">Director</p>
+	    						</div>
+	    					</div>
+	    					<div class="article-section-teams-card">
+	    						<div class="article-section-teams-card-image">
+	    							<img src="assets/images/team-3.png" alt="team-1" loading="lazy">
+	    						</div>
+	    						<div class="article-section-teams-card-content">
+	    							<h4 class="article-section-teams-card-name">George Woodward</h4>
+	    							<p class="article-section-teams-card-job-title">Director</p>
+	    						</div>
+	    					</div>
+	    					<div class="article-section-teams-card">
+	    						<div class="article-section-teams-card-image">
+	    							<img src="assets/images/team-3.png" alt="team-1" loading="lazy">
+	    						</div>
+	    						<div class="article-section-teams-card-content">
+	    							<h4 class="article-section-teams-card-name">George Woodward</h4>
+	    							<p class="article-section-teams-card-job-title">Director</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<h2>Related</h2>
+	    				<div class="article-section-related">
+	    					<div class="insights-section-slide-card">
+	    						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+	    						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+	    					</div>
+
+	    					<div class="insights-section-slide-card">
+	    						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+	    						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+	    					</div>
+
+	    					<div class="insights-section-slide-card">
+	    						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+	    						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+      <div class="text-section secondary">
+      	<div class="container">
+      		<div class="text-section-content">
+      			<h2>Enjoyed this article?<br>Subscribe to our newsletter for more insights</h2>
+      			<p><span><strong>Innovate News: C-Level Insights</strong></span><br>Innovate News Delivers trends and strategies to strengthen boards and empower C-level leaders to drive success</p>
+      			<a href="#" class="button primary">Subscribe</a>
+      		</div>
+      	</div>
+      </div>
+      <div class="case-section">
+      	<div class="container">
+      		<h2>Case Studies</h2>
+      		<div class="insights-section-slider swiper">
+      			<div class="swiper-wrapper">
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      			</div>
+      			<button class="insights-section-btn-prev">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-prev">
+      			</button>
+      			<button class="insights-section-btn-next">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-next">
+      			</button>
+      		</div>
+      	</div>
+      </div>
+      <div class="text-section secondary">
+      	<div class="container">
+      		<div class="text-section-content">
+      			<h2>Discover how we can help you appoint exceptional leadership talent for your business</h2>
+      			<p><span>Book a confidential call with one of our executive search Directors</span></p>
+      			<a href="#" class="button primary">Book a call</a>
+      		</div>
+      	</div>
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-body">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/images/footer-logo.png" alt="footer-logo" loading="lazy">
+                    </a>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social">
+                            X
+                        </a>
+                        <a href="#" class="footer-social">
+                            f
+                        </a>
+                        <a href="#" class="footer-social">
+                            in
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Contact Us</p>
+                    <div class="footer-text">
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                    </div>
+                    <p class="footer-heading">Quick Links</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
