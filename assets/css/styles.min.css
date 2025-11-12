@@ -209,7 +209,7 @@ body.overflow {
 }
 @media (min-width: 1440px) {
   .container {
-    padding: 0px 80px;
+    padding: 0px 200px;
   }
 }
 
@@ -558,7 +558,7 @@ input:focus::placeholder {
   }
 }
 .header-menu-link {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 13px;
   transition: all 0.25s ease 0s;
   position: relative;
@@ -603,7 +603,7 @@ input:focus::placeholder {
 .header-search p {
   margin: 0px;
   font-weight: 300;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 13px;
 }
 @media (min-width: 1440px) {
@@ -631,7 +631,7 @@ input:focus::placeholder {
   align-items: center;
   gap: 8px;
   max-width: fit-content;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 300;
   line-height: 100%;
   font-size: 13px;
@@ -660,7 +660,7 @@ input:focus::placeholder {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.71);
 }
 .header-action-link span svg {
   display: block;
@@ -728,7 +728,7 @@ input:focus::placeholder {
 }
 .footer-link, .footer-text * {
   margin: 0px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 300;
   line-height: 150%;
   font-size: 14px;
@@ -768,7 +768,7 @@ input:focus::placeholder {
   gap: 20px;
   text-align: center;
   padding: 8px 16px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 16px;
   border-radius: 100px;
   min-width: 100px;
@@ -827,7 +827,7 @@ header .choices {
   border-color: #0076ad;
 }
 .choices__item--selectable {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 13px;
   font-weight: 300;
 }
@@ -905,7 +905,7 @@ header .choices {
   margin: 0px;
   margin-top: 30px;
   max-width: 800px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 32px;
   font-weight: 400;
   max-width: fit-content;
@@ -954,7 +954,7 @@ header .choices {
 .hero-section-slide-text {
   margin: 0px;
   margin-top: 16px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 16px;
   font-weight: 300;
   max-width: 285px;
@@ -1012,7 +1012,7 @@ header .choices {
   }
 }
 .hero-section-slide-date {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   margin: 0px;
   font-weight: 300;
 }
@@ -1167,13 +1167,13 @@ header .choices {
   flex-direction: column;
 }
 .insights-section-slide-card-image {
-  aspect-ratio: 1/0.55;
+  aspect-ratio: 1/0.5;
   flex: 1 0;
 }
 .insights-section-slide-card-text {
   flex: 1 0;
   margin: 0px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-size: 18px;
   background-color: #0b5852;
   padding: 12px 16px;
@@ -1191,7 +1191,7 @@ header .choices {
   }
 }
 .insights-section-slide-card-text a {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 700;
 }
 .insights-section-slide-card-text a:hover {
@@ -1209,6 +1209,11 @@ header .choices {
   font-size: 14px;
 }
 @media (min-width: 1440px) {
+  .insights-section-slide-grid .insights-section-slide-card-text {
+    padding: 12px 18px;
+  }
+}
+@media (min-width: 1920px) {
   .insights-section-slide-grid .insights-section-slide-card-text {
     padding: 12px 18px;
     font-size: 18px;
@@ -1339,23 +1344,23 @@ header .choices {
 }
 .help-section-text {
   margin: 0px;
-  font-size: 14px;
+  font-size: 16px;
   color: #9cbbb8;
   line-height: 150%;
 }
-@media (min-width: 768px) {
-  .help-section-text {
-    max-width: 700px;
-  }
-}
 @media (min-width: 1024px) {
   .help-section-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1440px) {
   .help-section-text {
-    font-size: 18px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .help-section-text {
+    max-width: 700px;
   }
 }
 .help-section-body {
@@ -1386,7 +1391,7 @@ header .choices {
 }
 .help-section-row:first-child .help-section-item:last-child {
   background-color: #005149;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
 }
 .help-section-row:last-child {
   flex-direction: column-reverse;
@@ -1398,7 +1403,7 @@ header .choices {
 }
 .help-section-row:last-child .help-section-item:first-child {
   background-color: #005149;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
 }
 .help-section-row:last-child .help-section-item:last-child {
   background-color: #598e89;
@@ -1647,7 +1652,7 @@ header .choices {
 .grid-section-column p {
   margin: 0px;
   font-size: 16px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   line-height: 150%;
   font-weight: 300;
 }
@@ -1739,7 +1744,7 @@ header .choices {
   gap: 20px;
 }
 .sector-section-link {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 300;
   transition: all 0.25s ease 0s;
   position: relative;
@@ -1828,7 +1833,7 @@ header .choices {
 }
 .text-section-content p {
   margin: 0px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   line-height: 180%;
   font-weight: 300;
 }
@@ -1935,16 +1940,16 @@ header .choices {
 }
 @media (min-width: 1440px) {
   .team-section-content h3 {
-    padding: 32px;
+    font-size: 32px;
   }
 }
 @media (min-width: 1920px) {
   .team-section-content h3 {
-    padding: 40px;
+    font-size: 40px;
   }
 }
 .team-section-content a span {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.71);
   display: inline-flex;
   width: 20px;
   align-items: center;
@@ -1978,7 +1983,7 @@ header .choices {
   }
 }
 .team-section-text * {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 300;
   line-height: 170%;
   font-size: 14px;
@@ -1995,6 +2000,7 @@ header .choices {
 }
 .team-section-text * strong {
   font-weight: 700;
+  color: white;
 }
 .team-section-text > *:not(:first-child) {
   margin-top: 6px;
@@ -2236,7 +2242,7 @@ header .choices {
 }
 .article-section-content * {
   font-weight: 300;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-family: "Roboto", serif;
   line-height: 150%;
 }
@@ -2461,7 +2467,7 @@ header .choices {
 .article-section-teams-card-job-title {
   margin: 0px;
   margin-top: 10px;
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
   font-weight: 700;
   font-size: 18px;
 }
@@ -2542,7 +2548,7 @@ header .choices {
   background-color: rgba(0, 166, 216, 0.8);
 }
 .team-article-section-item-content * {
-  color: white;
+  color: rgba(255, 255, 255, 0.71);
 }
 .team-article-section-name {
   font-weight: 300;
