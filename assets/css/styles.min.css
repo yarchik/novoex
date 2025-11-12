@@ -1191,7 +1191,7 @@ header .choices {
   }
 }
 .insights-section-slide-card-text a {
-  color: rgba(255, 255, 255, 0.71);
+  color: white;
   font-weight: 700;
 }
 .insights-section-slide-card-text a:hover {
