@@ -1497,6 +1497,12 @@ header .choices {
 .case-section-slide > *:last-child .insights-section-slide-card-text {
   background-color: #0ca9d9;
 }
+@media (min-width: 1920px) {
+  .case-section.explore-section .insights-section-slide-card-text {
+    font-size: 24px;
+    padding: 24px 32px;
+  }
+}
 
 .grid-section {
   padding: 40px 0px;
